@@ -6,6 +6,7 @@
     "grunt",
     "gruntplugin",
     "npm",
+    "package",
     "validate"
   ],
   "homepage": "https://github.com/joshuaspence/grunt-npm-validate",
