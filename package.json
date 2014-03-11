@@ -37,6 +37,7 @@
     "test": "grunt travis"
   },
   "dependencies": {
+    "chalk": "~0.4.0",
     "package-json-validator": "~0.5.5"
   },
   "devDependencies": {

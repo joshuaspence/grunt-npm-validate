@@ -8,7 +8,8 @@
 
 'use strict';
 
-var PJV = require('package-json-validator').PJV;
+var chalk = require('chalk'),
+    PJV = require('package-json-validator').PJV;
 
 function unary(fn) {
     return function(first) {
@@ -26,17 +27,17 @@ module.exports = function(grunt) {
         var result = PJV.validate(pkg);
 
         if (result.errors && result.errors.length) {
-            grunt.log.subhead('Errors:');
+            grunt.log.subhead(chalk.bold(chalk.red('Errors:')));
             result.errors.forEach(unary(grunt.log.error));
         }
 
         if (result.warnings && result.warnings.length) {
-            grunt.log.subhead('Warnings:');
+            grunt.log.subhead(chalk.bold(chalk.yellow('Warnings:')));
             result.warnings.forEach(unary(grunt.log.warn));
         }
 
         if (result.recommendations && result.recommendations.length) {
-            grunt.log.subhead('Recommendations:');
+            grunt.log.subhead(chalk.bold(chalk.yellow('Recommendations:')));
             result.recommendations.forEach(unary(grunt.log.warn));
         }
     });
