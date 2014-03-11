@@ -18,7 +18,11 @@ function unary(fn) {
 
 module.exports = function(grunt) {
     grunt.registerTask('npm-validate', 'Opinionated package.json validator', function() {
-        var pkg = grunt.file.read('package.json');
+        var options = this.options({
+            file: grunt.config('pkgFile') || 'package.json'
+        });
+
+        var pkg = grunt.file.read(options.file);
         var result = PJV.validate(pkg);
 
         if (result.errors && result.errors.length) {
