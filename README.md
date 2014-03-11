@@ -5,8 +5,8 @@ grunt-npm-validate
 
 Grunt task for validating NPM packages.
 
-Install
--------
+Getting Started
+---------------
 If you haven't used [Grunt](http://gruntjs.com/) before, be sure to check out
 the [Getting Started](http://gruntjs.com/getting-started) guide, as it explains
 how to create a [Gruntfile](http://gruntjs.com/sample-gruntfile) as well as
@@ -19,12 +19,25 @@ Once the plugin has been installed, it may be enabled inside your Gruntfile with
 
     grunt.loadNpmTasks('grunt-npm-validate');
 
-Usage
------
-    grunt npm-validate
+npm-validate task
+-----------------
+*Run this task with the `grunt npm-validate` command.*
 
-Options
--------
-    'npm-validate': {
-        file: 'package.json'
-    }
+Task targets, files and options may be specified according to the grunt
+[Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
+
+### Options
+The following options are available:
+
+###### file
+Type: `String`
+Default value: `grunt.config('pkgFile') || 'package.json'`
+
+If this filename is specified, the specified file will be validated.
+
+### Usage Examples
+```js
+'npm-validate': {
+  file: 'package.json'
+}
+```
