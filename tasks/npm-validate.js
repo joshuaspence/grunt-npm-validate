@@ -40,5 +40,7 @@ module.exports = function(grunt) {
             grunt.log.subhead(chalk.bold(chalk.yellow('Recommendations:')));
             result.recommendations.forEach(unary(grunt.log.warn));
         }
+
+        return result.errors || result.warnings;
     });
 };
