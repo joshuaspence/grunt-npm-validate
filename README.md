@@ -38,6 +38,6 @@ If this filename is specified, the specified file will be validated.
 ### Usage Examples
 ```js
 'npm-validate': {
-  file: 'package.json'
+    file: 'package.json'
 }
 ```
