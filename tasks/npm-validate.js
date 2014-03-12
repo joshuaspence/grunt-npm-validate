@@ -24,7 +24,14 @@ module.exports = function(grunt) {
         });
 
         var pkg = grunt.file.read(options.file);
+
+        grunt.log.write('Validating ' + options.file + '...');
         var result = PJV.validate(pkg);
+        if (result.errors || result.warnings) {
+            grunt.log.error();
+        } else {
+            grunt.log.ok();
+        }
 
         if (result.errors && result.errors.length) {
             grunt.log.subhead(chalk.bold(chalk.red('Errors:')));
