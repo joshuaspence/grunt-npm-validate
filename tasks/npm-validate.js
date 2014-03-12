@@ -48,6 +48,6 @@ module.exports = function(grunt) {
             result.recommendations.forEach(unary(grunt.log.warn));
         }
 
-        return result.errors || result.warnings;
+        return !(result.errors || result.warnings);
     });
 };
