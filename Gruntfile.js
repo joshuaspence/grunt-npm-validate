@@ -20,6 +20,7 @@ module.exports = function(grunt) {
             test: 'test/**/*.js'
         },
         jsonlint: {
+            jscs: ['.jscsrc'],
             jshint: ['.jshintrc'],
             npm: ['package.json'],
             test: 'test/**/*.json'
