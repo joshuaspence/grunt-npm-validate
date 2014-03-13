@@ -5,7 +5,8 @@ module.exports = function(grunt) {
     grunt.initConfig({
         'npm-validate': {
             options: {
-                file: grunt.option('pkgFile') || grunt.config('pkgFile')
+                file: grunt.option('pkgFile') || grunt.config('pkgFile'),
+                force: !!grunt.option('force')
             }
         }
     });

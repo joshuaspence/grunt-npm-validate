@@ -19,6 +19,23 @@ module.exports = {
             test.done();
         });
     },
+    force: function(test) {
+        test.expect(2);
+
+        grunt.util.spawn({
+            grunt: true,
+            args: [
+                '--gruntfile', 'test/Gruntfile.js',
+                '--pkgFile', 'fixtures/empty.json',
+                '--force', 'true',
+                'npm-validate'
+            ]
+        }, function(error, result, code) {
+            test.equal(error, null);
+            test.equal(code, 0);
+            test.done();
+        });
+    },
     minimal: function(test) {
         test.expect(2);
 

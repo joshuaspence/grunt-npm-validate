@@ -35,6 +35,12 @@ The following options are available:
 
 If this filename is specified, the specified file will be validated.
 
+###### force
+- Type: `Boolean`
+- Default value: `false`
+
+Set force to true to report errors but not fail the task.
+
 ### Usage Examples
 ```js
 'npm-validate': {
