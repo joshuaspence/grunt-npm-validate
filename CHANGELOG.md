@@ -1,4 +1,4 @@
-1.2.2 / 2014-03-13
+1.2.2 / 2014-03-14
 ==================
 
   * Add a `strict` option to fail on warnings.
