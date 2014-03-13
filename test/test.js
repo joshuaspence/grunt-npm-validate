@@ -67,5 +67,22 @@ module.exports = {
             test.equal(code, 0);
             test.done();
         });
+    },
+    strict: function(test) {
+        test.expect(2);
+
+        grunt.util.spawn({
+            grunt: true,
+            args: [
+                '--gruntfile', 'test/Gruntfile.js',
+                '--pkgFile', 'fixtures/minimal.json',
+                '--strict', 'true',
+                'npm-validate'
+            ]
+        }, function(error, result, code) {
+            test.notEqual(error, null);
+            test.notEqual(code, 0);
+            test.done();
+        });
     }
 };

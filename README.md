@@ -41,6 +41,12 @@ If this filename is specified, the specified file will be validated.
 
 Set force to true to report errors but not fail the task.
 
+###### strict
+- Type: `Boolean`
+- Default value: `false`
+
+Set strict to true to fail on warnings as well as errors.
+
 ### Usage Examples
 ```js
 'npm-validate': {

@@ -21,7 +21,8 @@ module.exports = function(grunt) {
     grunt.registerTask('npm-validate', 'Opinionated package.json validator', function() {
         var options = this.options({
             file: grunt.config('pkgFile') || 'package.json',
-            force: false
+            force: false,
+            strict: false,
         });
 
         var pkg = grunt.file.read(options.file);
@@ -49,6 +50,6 @@ module.exports = function(grunt) {
             result.recommendations.forEach(unary(grunt.log.warn));
         }
 
-        return options.force || !result.errors;
+        return options.force || (!result.errors && (!options.strict || !result.warnings));
     });
 };
