@@ -16,7 +16,8 @@ module.exports = function(grunt) {
                 jshintrc: true
             },
             grunt: 'Gruntfile.js',
-            tasks: 'tasks/**/*.js'
+            tasks: 'tasks/**/*.js',
+            test: 'test/**/*.js'
         },
         jsonlint: {
             jshint: ['.jshintrc'],
