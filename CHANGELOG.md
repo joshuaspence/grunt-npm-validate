@@ -1,3 +1,12 @@
+1.2.1 / 2014-03-13
+==================
+
+  * Add a `force` option.
+  * Add `/test/` directory to `.npmignore`.
+  * Add changelog.
+  * Update `grunt` dependency to v0.4.4.
+  * Update `grunt-contrib-jshint` dependency to v0.9.0.
+
 1.2.0 / 2014-03-13
 ==================
 
