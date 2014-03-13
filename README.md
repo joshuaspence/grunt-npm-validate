@@ -30,8 +30,8 @@ Task targets, files and options may be specified according to the grunt
 The following options are available:
 
 ###### file
-Type: `String`
-Default value: `grunt.config('pkgFile') || 'package.json'`
+- Type: `String`
+- Default value: `grunt.config('pkgFile') || 'package.json'`
 
 If this filename is specified, the specified file will be validated.
 
