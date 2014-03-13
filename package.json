@@ -51,7 +51,7 @@
     "grunt-release": "~0.7.0"
   },
   "peerDependencies": {
-    "grunt": "~0.4.3"
+    "grunt": "~0.4.4"
   },
   "engines": {
     "node": ">= 0.8.0"
