@@ -21,7 +21,8 @@ module.exports = function(grunt) {
         },
         jsonlint: {
             jshint: ['.jshintrc'],
-            npm: ['package.json']
+            npm: ['package.json'],
+            test: 'test/**/*.json'
         },
         nodeunit: {
             all: 'test/**/*.js'
