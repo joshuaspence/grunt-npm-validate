@@ -23,6 +23,11 @@ module.exports = function(grunt) {
         },
         nodeunit: {
             all: 'test/**/*.js'
+        },
+        'npm-validate': {
+            options: {
+                strict: true
+            }
         }
     });
 
