@@ -8,7 +8,8 @@ module.exports = function(grunt) {
                 config: '.jscsrc'
             },
             grunt: 'Gruntfile.js',
-            tasks: 'tasks/**/*.js'
+            tasks: 'tasks/**/*.js',
+            test: 'test/**/*.js'
         },
         jshint: {
             options: {
