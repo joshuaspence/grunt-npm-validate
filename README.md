@@ -23,25 +23,25 @@ npm-validate task
 -----------------
 *Run this task with the `grunt npm-validate` command.*
 
-Task targets, files and options may be specified according to the grunt
+Task files and options may be specified according to the grunt
 [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
 
 ### Options
 The following options are available:
 
-###### file
+#### file
 - Type: `String`
 - Default value: `grunt.config('pkgFile') || 'package.json'`
 
 If this filename is specified, the specified file will be validated.
 
-###### force
+#### force
 - Type: `Boolean`
 - Default value: `false`
 
 Set force to true to report errors but not fail the task.
 
-###### strict
+#### strict
 - Type: `Boolean`
 - Default value: `false`
 
