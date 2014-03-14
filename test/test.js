@@ -23,7 +23,7 @@ function test(file, valid, args) {
             ].concat(args || []).concat('npm-validate')
         }, function(error, result, code) {
             if (valid) {
-                test.equal(error, null);
+                test.ifError(error);
                 test.equal(code, 0);
             } else {
                 test.notEqual(error, null);
