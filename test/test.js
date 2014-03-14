@@ -2,6 +2,15 @@
 
 var grunt = require('grunt');
 
+/**
+ * Constructs a test case.
+ *
+ * @param  {string}           file   The `package.json` file to be tested.
+ * @param  {boolean}          valid  Flag indicating whether the test is
+ *                                   expected to pass.
+ * @param  {Array.<string>}   [args] Additional arguments to pass to `grunt`.
+ * @return {function(Object)}        Testing function for `nodeunit`.
+ */
 function test(file, valid, args) {
     return function(test) {
         test.expect(2);
