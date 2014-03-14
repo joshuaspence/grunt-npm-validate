@@ -25,9 +25,9 @@ module.exports = function(grunt) {
             strict: false
         });
 
+        grunt.log.write('Validating ' + options.file + '...');
         var pkg = grunt.file.read(options.file);
 
-        grunt.log.write('Validating ' + options.file + '...');
         var result = PJV.validate(pkg);
         if (result.errors || result.warnings) {
             grunt.log.error();
