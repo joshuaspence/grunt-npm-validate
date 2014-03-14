@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     var chalk = require('chalk'),
         PJV = require('package-json-validator').PJV;
 
-    grunt.registerTask('npm-validate', 'Opinionated package.json validator', function() {
+    grunt.registerTask('npm-validate', 'Opinionated package.json validator.', function() {
         var options = this.options({
             file: grunt.config('pkgFile') || 'package.json',
             force: false,
