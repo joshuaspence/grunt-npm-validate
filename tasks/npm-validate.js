@@ -30,21 +30,21 @@ module.exports = function(grunt) {
         }
 
         if ((results.errors || []).length) {
-            grunt.log.subhead(chalk.bold(chalk.red('Errors:')));
+            grunt.log.subhead(chalk.red('Errors:'));
             results.errors.forEach(function(error) {
                 grunt.log.error(error);
             });
         }
 
         if ((results.warnings || []).length) {
-            grunt.log.subhead(chalk.bold(chalk.yellow('Warnings:')));
+            grunt.log.subhead(chalk.yellow('Warnings:'));
             results.warnings.forEach(function(warning) {
                 grunt.log.warn(warning);
             });
         }
 
         if ((results.recommendations || []).length) {
-            grunt.log.subhead(chalk.bold(chalk.green('Recommendations:')));
+            grunt.log.subhead(chalk.green('Recommendations:'));
             results.recommendations.forEach(function(recommendation) {
                 grunt.log.warn(recommendation);
             });
