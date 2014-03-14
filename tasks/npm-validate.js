@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         var options = this.options({
             file: grunt.config('pkgFile') || 'package.json',
             force: false,
-            strict: false,
+            strict: false
         });
 
         var pkg = grunt.file.read(options.file);
