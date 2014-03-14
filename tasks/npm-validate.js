@@ -29,21 +29,21 @@ module.exports = function(grunt) {
             grunt.log.ok();
         }
 
-        if (results.errors && results.errors.length) {
+        if ((results.errors || []).length) {
             grunt.log.subhead(chalk.bold(chalk.red('Errors:')));
             results.errors.forEach(function(error) {
                 grunt.log.error(error);
             });
         }
 
-        if (results.warnings && results.warnings.length) {
+        if ((results.warnings || []).length) {
             grunt.log.subhead(chalk.bold(chalk.yellow('Warnings:')));
             results.warnings.forEach(function(warning) {
                 grunt.log.warn(warning);
             });
         }
 
-        if (results.recommendations && results.recommendations.length) {
+        if ((results.recommendations || []).length) {
             grunt.log.subhead(chalk.bold(chalk.green('Recommendations:')));
             results.recommendations.forEach(function(recommendation) {
                 grunt.log.warn(recommendation);
