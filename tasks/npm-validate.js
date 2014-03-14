@@ -43,7 +43,7 @@ module.exports = function(grunt) {
         }
 
         if (result.recommendations && result.recommendations.length) {
-            grunt.log.subhead(chalk.bold(chalk.yellow('Recommendations:')));
+            grunt.log.subhead(chalk.bold(chalk.green('Recommendations:')));
             result.recommendations.forEach(function(recommendation) {
                 grunt.log.warn(recommendation);
             });
