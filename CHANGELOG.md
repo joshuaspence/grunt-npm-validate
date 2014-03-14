@@ -1,3 +1,17 @@
+1.2.3 / 2014-03-14
+==================
+
+  * Refactor testing code.
+  * Don't need to use `chalk.bold` because `grunt.log.subhead` does the same thing.
+  * Color recommendations green.
+  * Added period to task info.
+  * Remove `unary` function.
+  * Move code inside the `module.exports` block.
+  * Output `grunt.log` message before attempting to read the file.
+  * Coding style fixes.
+  * Update `grunt` as a peer dependency.
+  * Add a keyword for NPM.
+
 1.2.2 / 2014-03-14
 ==================
 
