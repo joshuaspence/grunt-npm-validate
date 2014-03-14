@@ -5,19 +5,18 @@
  * Copyright (c) 2014 Joshua Spence
  * Licensed under the MIT license.
  */
-
-'use strict';
-
-var chalk = require('chalk'),
-    PJV = require('package-json-validator').PJV;
-
-function unary(fn) {
-    return function(first) {
-        return fn(first);
-    };
-}
-
 module.exports = function(grunt) {
+    'use strict';
+
+    var chalk = require('chalk'),
+        PJV = require('package-json-validator').PJV;
+
+    function unary(fn) {
+        return function(first) {
+            return fn(first);
+        };
+    }
+
     grunt.registerTask('npm-validate', 'Opinionated package.json validator', function() {
         var options = this.options({
             file: grunt.config('pkgFile') || 'package.json',
