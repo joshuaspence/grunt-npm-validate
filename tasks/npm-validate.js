@@ -19,10 +19,11 @@ module.exports = function(grunt) {
         });
 
         grunt.log.write('Validating ' + options.file + '...');
-        var pkg = grunt.file.read(options.file);
 
-        var result = PJV.validate(pkg);
-        if (result.errors || result.warnings) {
+        var result = PJV.validate(grunt.file.read(options.file));
+        var fail = result.errors || options.strict && result.warnings;
+
+        if (fail) {
             grunt.log.error();
         } else {
             grunt.log.ok();
@@ -49,6 +50,6 @@ module.exports = function(grunt) {
             });
         }
 
-        return options.force || (!result.errors && (!options.strict || !result.warnings));
+        return options.force || !fail;
     });
 };
