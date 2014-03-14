@@ -47,7 +47,8 @@ module.exports = function(grunt) {
     grunt.renameTask('release', 'bump');
     grunt.registerTask('lint', ['jsonlint', 'jshint', 'jscs']);
     grunt.registerTask('release', function() {
-        grunt.task.run('lint', Array.prototype.concat.apply('bump', arguments).join(':'));
+        var bump = Array.prototype.concat.apply('bump', arguments).join(':');
+        grunt.task.run('lint', 'test', 'validate', bump);
     });
     grunt.registerTask('test', ['nodeunit']);
     grunt.registerTask('validate', ['npm-validate']);
