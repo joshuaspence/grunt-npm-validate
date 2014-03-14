@@ -11,12 +11,6 @@ module.exports = function(grunt) {
     var chalk = require('chalk'),
         PJV = require('package-json-validator').PJV;
 
-    function unary(fn) {
-        return function(first) {
-            return fn(first);
-        };
-    }
-
     grunt.registerTask('npm-validate', 'Opinionated package.json validator', function() {
         var options = this.options({
             file: grunt.config('pkgFile') || 'package.json',
@@ -36,17 +30,23 @@ module.exports = function(grunt) {
 
         if (result.errors && result.errors.length) {
             grunt.log.subhead(chalk.bold(chalk.red('Errors:')));
-            result.errors.forEach(unary(grunt.log.error));
+            result.errors.forEach(function(error) {
+                grunt.log.error(error);
+            });
         }
 
         if (result.warnings && result.warnings.length) {
             grunt.log.subhead(chalk.bold(chalk.yellow('Warnings:')));
-            result.warnings.forEach(unary(grunt.log.warn));
+            result.warnings.forEach(function(warning) {
+                grunt.log.warn(warning);
+            });
         }
 
         if (result.recommendations && result.recommendations.length) {
             grunt.log.subhead(chalk.bold(chalk.yellow('Recommendations:')));
-            result.recommendations.forEach(unary(grunt.log.warn));
+            result.recommendations.forEach(function(recommendation) {
+                grunt.log.warn(recommendation);
+            });
         }
 
         return options.force || (!result.errors && (!options.strict || !result.warnings));
