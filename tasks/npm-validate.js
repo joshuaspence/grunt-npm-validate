@@ -20,8 +20,8 @@ module.exports = function(grunt) {
 
         grunt.log.write('Validating ' + options.file + '...');
 
-        var result = PJV.validate(grunt.file.read(options.file));
-        var fail = result.errors || options.strict && result.warnings;
+        var results = PJV.validate(grunt.file.read(options.file));
+        var fail = results.errors || options.strict && results.warnings;
 
         if (fail) {
             grunt.log.error();
@@ -29,23 +29,23 @@ module.exports = function(grunt) {
             grunt.log.ok();
         }
 
-        if (result.errors && result.errors.length) {
+        if (results.errors && results.errors.length) {
             grunt.log.subhead(chalk.bold(chalk.red('Errors:')));
-            result.errors.forEach(function(error) {
+            results.errors.forEach(function(error) {
                 grunt.log.error(error);
             });
         }
 
-        if (result.warnings && result.warnings.length) {
+        if (results.warnings && results.warnings.length) {
             grunt.log.subhead(chalk.bold(chalk.yellow('Warnings:')));
-            result.warnings.forEach(function(warning) {
+            results.warnings.forEach(function(warning) {
                 grunt.log.warn(warning);
             });
         }
 
-        if (result.recommendations && result.recommendations.length) {
+        if (results.recommendations && results.recommendations.length) {
             grunt.log.subhead(chalk.bold(chalk.green('Recommendations:')));
-            result.recommendations.forEach(function(recommendation) {
+            results.recommendations.forEach(function(recommendation) {
                 grunt.log.warn(recommendation);
             });
         }
