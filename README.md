@@ -1,6 +1,7 @@
 grunt-npm-validate
 ==================
 [![Build Status](https://travis-ci.org/joshuaspence/grunt-npm-validate.png)](http://travis-ci.org/joshuaspence/grunt-npm-validate)
+[![Dependency Status](https://www.versioneye.com/nodejs/grunt-npm-validate/badge.png)](https://www.versioneye.com/nodejs/grunt-npm-validate)
 [![NPM version](https://badge.fury.io/js/grunt-npm-validate.png)](http://badge.fury.io/js/grunt-npm-validate)
 
 Grunt task for validating NPM packages.
