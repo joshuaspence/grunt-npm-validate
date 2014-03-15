@@ -53,7 +53,9 @@ Set strict to true to fail on warnings as well as errors.
 
 ### Usage Examples
 ```js
-'npm-validate': {
-    file: 'package.json'
-}
+grunt.initConfig({
+    'npm-validate': {
+        file: 'package.json'
+    }
+});
 ```
