@@ -25,7 +25,7 @@ grunt.loadNpmTasks('grunt-npm-validate');
 
 npm-validate task
 -----------------
-*Run this task with the `grunt npm-validate` command.*
+_Run this task with the `grunt npm-validate` command._
 
 Task files and options may be specified according to the grunt
 [Configuring tasks](http://gruntjs.com/configuring-tasks) guide.
