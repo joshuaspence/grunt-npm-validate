@@ -9,7 +9,7 @@ var grunt = require('grunt');
  * @param  {boolean}          valid  Flag indicating whether the test is
  *                                   expected to pass.
  * @param  {Array}            [args] Additional arguments to pass to `grunt`.
- * @return {function(Object)}         Testing function for `nodeunit`.
+ * @return {function(Object)}        Testing function for `nodeunit`.
  */
 function test(file, valid, args) {
     return function(test) {
