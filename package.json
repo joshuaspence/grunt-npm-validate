@@ -3,7 +3,6 @@
   "version": "1.2.3",
   "description": "Grunt task for validating NPM packages.",
   "keywords": [
-    "grunt",
     "gruntplugin",
     "npm",
     "package",
