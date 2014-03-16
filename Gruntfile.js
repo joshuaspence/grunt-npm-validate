@@ -25,6 +25,18 @@ module.exports = function(grunt) {
             npm: 'package.json',
             test: 'test/**/*.json'
         },
+        lintspaces: {
+            options: {
+                editorconfig: '.editorconfig',
+                ignores: [
+                    'js-comments'
+                ]
+            },
+            all: [
+                '**/*',
+                '!node_modules/**'
+            ]
+        },
         nodeunit: {
             all: 'test/**/*.js'
         },
@@ -41,11 +53,12 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-nodeunit');
     grunt.loadNpmTasks('grunt-jscs-checker');
     grunt.loadNpmTasks('grunt-jsonlint');
+    grunt.loadNpmTasks('grunt-lintspaces');
     grunt.loadNpmTasks('grunt-release');
 
     // Register tasks.
     grunt.renameTask('release', 'bump');
-    grunt.registerTask('lint', ['jsonlint', 'jshint', 'jscs']);
+    grunt.registerTask('lint', ['lintspaces', 'jsonlint', 'jshint', 'jscs']);
     grunt.registerTask('release', function() {
         // Pass targets to the `grunt-release` task.
         var bump = Array.prototype.concat.apply('bump', arguments).join(':');
