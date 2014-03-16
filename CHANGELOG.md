@@ -1,3 +1,10 @@
+1.2.4 / Unreleased
+==================
+
+  * Add a grunt task to lint spacing using `.editorconfig`.
+  * Add VersionEye badge to README.
+  * Various improvements to README.
+
 1.2.3 / 2014-03-14
 ==================
 
